@@ -106,8 +106,7 @@ const nextISSTimesForMyLocation = function(callback) {
   // empty for now
   fetchMyIP((error, ip) => {
     if (error) {
-      callback(error, null);
-      return;
+      return callback(error, null);
     }
     fetchCoordsByIP(ip, (error, coordinates) => {
       if (error) {
